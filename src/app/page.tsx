@@ -14,8 +14,8 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className={clsx(isDarkMode ? "dark" : "", "bg-stone-100 dark:bg-stone-900 flex flex-col items-center min-h-screen p-6 font-serif font-[family-name:var(--font-garamond)]")}>
-      <main className="flex flex-col gap-8 grow p-12 max-w-xl">
+    <div className={clsx(isDarkMode ? "dark" : "", "bg-stone-100 dark:bg-stone-900 flex flex-col items-center min-h-screen px-6 py-6 font-serif font-[family-name:var(--font-garamond)]")}>
+      <main className="flex flex-col gap-8 grow sm:py-12 max-w-xl">
         <div className="flex flex-row gap-4 items-center">
           <LiveDate />
           <Divider />
@@ -76,7 +76,7 @@ export default function Home() {
           <SocialIcon url="https://www.linkedin.com/in/marshal-kalynchuk-328398236" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
           <SocialIcon url="https://www.instagram.com/marshal_kalynchuk/" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
           <SocialIcon url="https://github.com/marshal-kalynchuk" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
-          <Link href="https://www.memloop.ai" className="ml-1.5 flex items-center justify-center">
+          <Link href="https://www.memloop.ai" className="ml-2 flex items-center justify-center">
             <Memloop className="w-7 h-7 text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" />
           </Link>
         </div>
