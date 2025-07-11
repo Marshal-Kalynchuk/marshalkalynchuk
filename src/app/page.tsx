@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className={clsx(isDarkMode ? "dark" : "", "bg-stone-100 dark:bg-stone-900 flex flex-col items-center min-h-screen px-6 py-6 font-serif font-[family-name:var(--font-garamond)]")}>
-      <main className="flex flex-col gap-8 grow sm:py-12 max-w-xl">
+      <main className="flex flex-col gap-8 grow sm:py-12 max-w-lg">
         <div className="flex flex-row gap-4 items-center">
           <LiveDate />
           <Divider />
