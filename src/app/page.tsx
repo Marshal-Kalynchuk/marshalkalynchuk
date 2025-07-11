@@ -76,7 +76,7 @@ export default function Home() {
           <SocialIcon url="https://www.linkedin.com/in/marshal-kalynchuk-328398236" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
           <SocialIcon url="https://www.instagram.com/marshal_kalynchuk/" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
           <SocialIcon url="https://github.com/marshal-kalynchuk" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
-          <Link href="https://www.memloop.ai" className="flex items-center justify-center">
+          <Link href="https://www.memloop.ai" className="ml-1.5 flex items-center justify-center">
             <Memloop className="w-7 h-7 text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" />
           </Link>
         </div>
