@@ -1,102 +1,90 @@
-import Image from "next/image";
+"use client";
+
+import { Strong, Text, TextLink } from "@/components/ui/text";
+import { Link } from "@/components/ui/link";
+import LiveDate from "@/components/LiveDate";
+import { Divider } from "@/components/ui/divider";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import clsx from "clsx";
+import { SocialIcon } from "react-social-icons";
+import { Memloop } from "@/components/ui/memloop";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className={clsx(isDarkMode ? "dark" : "", "bg-stone-100 dark:bg-stone-900 flex flex-col items-center min-h-screen p-6 font-serif font-[family-name:var(--font-garamond)]")}>
+      <main className="flex flex-col gap-8 grow p-12 max-w-xl">
+        <div className="flex flex-row gap-4 items-center">
+          <LiveDate />
+          <Divider />
+          <div>
+            <button onClick={() => setIsDarkMode(!isDarkMode)} className="">
+              {isDarkMode ? <SunIcon className="w-6 h-6 text-stone-400 hover:text-stone-500" /> : <MoonIcon className="w-6 h-6 text-stone-400 hover:text-stone-500" />}
+            </button>
+          </div>
         </div>
+
+        <div>
+          <Text className="">
+            hey! i&apos;m <Strong>Marshal Kalynchuk</Strong>&mdash;founder of <TextLink className="" href="https://www.memloop.com">memloop</TextLink>.
+            i&apos;m building tools that help people think clearer, remember more, and move faster.
+            <br />
+            <br />
+            i&apos;d love to meet <Strong>you</Strong>. so, <TextLink href="https://cal.com/marshal-kalynchuk">let&apos;s chat &rarr;</TextLink>
+          </Text>
+        </div>
+
+        <div>
+          <Text className="mb-1">
+            my time:
+          </Text>
+          <ul className="list-disc list-inside space-y-1">
+            <li className="text-stone-950 dark:text-stone-50">
+              <Text className="inline-block">
+                 building <TextLink href="https://www.memloop.com">memloop</TextLink> features
+              </Text>
+            </li>
+            <li className="text-stone-950 dark:text-stone-50">
+              <Text className="inline-block">
+                 designing product & ux flows
+              </Text>
+            </li>
+            <li className="text-stone-950 dark:text-stone-50">
+              <Text className="inline-block">
+                 reading & learning
+              </Text>
+            </li>
+            <li className="text-stone-950 dark:text-stone-50">
+              <Text className="inline-block">
+                gym & running
+              </Text>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <Text>i also love to gym, run, play tennis, water ski, snowboard, read, and travel.</Text>
+        </div>
+
+        <div className="flex justify-center">
+          <Text variant="secondary"><i>make it work, make it right, make it fast.</i></Text>
+        </div>
+
+        <div className="flex gap-4 justify-center">
+          <SocialIcon url="https://www.linkedin.com/in/marshal-kalynchuk/" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
+          <SocialIcon url="https://www.instagram.com/marshal.kalynchuk/" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
+          <SocialIcon url="https://github.com/marshal-kalynchuk" className="text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" fgColor="currentColor" bgColor="transparent" />
+          <Link href="https://www.memloop.com" className="flex items-center justify-center">
+            <Memloop className="w-7 h-7 text-stone-400 hover:text-stone-500 dark:text-stone-400 dark:hover:text-stone-500" />
+          </Link>
+        </div>
+
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="flex items-center justify-center">
+        <Text variant="secondary">&copy; {new Date().getFullYear()} Marshal Kalynchuk</Text>
       </footer>
     </div>
   );
