@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, MotionProps } from "framer-motion";
-import { Strong, Text } from "@/components/ui/text";
 import { ProjectCard, ProjectProps } from "@/components/ProjectCard";
 import { MemloopGradient } from "@/components/ui/memloop-gradient";
 

@@ -3,7 +3,6 @@ import { Subheading } from "@/components/ui/heading";
 import { SocialIcon } from "react-social-icons";
 
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-import { Link } from "./ui/link";
 import clsx from "clsx";
 
 export interface ProjectProps {

@@ -9,6 +9,37 @@ import { Memloop } from "@/components/ui/memloop";
 import { ThemeProvider } from "next-themes";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { Navigation } from "@/components/Navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marshal Kalynchuk",
+  metadataBase: new URL("https://marshalkalynchuk.com"),
+  description:
+    "Portfolio of Marshal Kalynchuk, software developer.",
+  openGraph: {
+    title: "Marshal Kalynchuk",
+    description:
+      "Portfolio of Marshal Kalynchuk, software developer.",
+    url: "https://marshalkalynchuk.com",
+    siteName: "Marshal Kalynchuk",
+    images: [
+      {
+        url: "/marshalkalynchuk.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marshal Kalynchuk",
+    description:
+      "Portfolio of Marshal Kalynchuk, software developer.",
+    images: ["/marshalkalynchuk.png"],
+  },
+};
 
 const garamond = EB_Garamond({
   variable: "--font-garamond",
@@ -24,6 +55,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Marshal Kalynchuk" />
+      </head>
       <body className={`${garamond.variable} antialiased`}>
         <ThemeProvider attribute="class">
           <div className="bg-stone-100 dark:bg-stone-900 flex flex-col items-center min-h-screen font-serif font-[family-name:var(--font-garamond)]">
