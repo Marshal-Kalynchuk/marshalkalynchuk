@@ -3,13 +3,10 @@
 import { useState, useEffect } from 'react';
 import { Text } from '@/components/ui/text';
 
-export default function LiveDate() {
-  const [date, setDate] = useState<Date | null>(null);
+export default function LiveDate({ serverDate }: { serverDate: string }) {
+  const [date, setDate] = useState(new Date(serverDate));
 
   useEffect(() => {
-    // Set initial date on client mount
-    setDate(new Date());
-
     const timerId = setInterval(() => {
       setDate(new Date());
     }, 1000);
@@ -30,7 +27,7 @@ export default function LiveDate() {
 
   return (
     <div>
-      <Text variant="secondary" className="whitespace-nowrap">my time: {date ? formatDate(date) : '...'}</Text>
+      <Text variant="secondary" className="whitespace-nowrap">{formatDate(date)}</Text>
     </div>
   );
 } 
