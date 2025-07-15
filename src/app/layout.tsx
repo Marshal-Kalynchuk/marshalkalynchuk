@@ -77,6 +77,7 @@ export default function RootLayout({
               <div  className="flex gap-4 justify-center">
                 <SocialIcon target="_blank" rel="noopener noreferrer" url="https://www.linkedin.com/in/marshal-kalynchuk-328398236" className="text-stone-400 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white" fgColor="currentColor" bgColor="transparent" />
                 <SocialIcon target="_blank" rel="noopener noreferrer" url="https://www.instagram.com/marshal_kalynchuk/" className="text-stone-400 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white" fgColor="currentColor" bgColor="transparent" />
+                <SocialIcon target="_blank" rel="noopener noreferrer" url="https://www.x.com/MarshalKal" className="text-stone-400 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white" fgColor="currentColor" bgColor="transparent" />
                 <SocialIcon target="_blank" rel="noopener noreferrer" url="https://github.com/marshal-kalynchuk" className="text-stone-400 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white" fgColor="currentColor" bgColor="transparent" />
                 <Link target="_blank" rel="noopener noreferrer" href="https://www.memloop.ai" className="ml-2 flex items-center justify-center">
                   <Memloop className="w-7 h-7 text-stone-400 hover:text-stone-950 dark:text-stone-400 dark:hover:text-white" />
