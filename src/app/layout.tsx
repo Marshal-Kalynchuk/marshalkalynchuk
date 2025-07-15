@@ -70,7 +70,7 @@ export default function RootLayout({
                 <ThemeSwitcher />
               </Navbar>
             </header>
-            <main className="flex flex-col gap-8 grow px-6 py-4 sm:py-8 w-full">
+            <main className="flex flex-col gap-8 grow px-4 py-4 sm:py-8 w-full">
               {children}
             </main>
             <footer className="flex flex-col items-center justify-center space-y-2 mb-2">

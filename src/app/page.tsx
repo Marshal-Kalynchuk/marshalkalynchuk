@@ -12,13 +12,17 @@ const animationProps: MotionProps = {
 
 export default function Home() {
   return (
-    <div className="space-y-6 max-w-lg mx-auto">
+    <div className="space-y-8 max-w-lg mx-auto">
 
       <motion.div {...animationProps}>
         <Text className="text-pretty">
-          Hey! I&apos;m <Strong>Marshal Kalynchuk</Strong>&mdash;founder of <TextLink className="" href="https://www.memloop.ai">Memloop</TextLink>.
-          I&apos;m building tools that help people think clearer, remember more, and move faster.
-          I&apos;d love to meet <Strong>you</Strong>. So, <TextLink href="https://cal.com/marshal-kalynchuk">let&apos;s chat &rarr;</TextLink>
+          Hey! I&apos;m <Strong>Marshal Kalynchuk</Strong>&mdash;founder of&nbsp;
+          <TextLink href="https://www.memloop.ai">Memloop</TextLink>. I build AI
+          tools so you move faster, remember more, and think clearer.
+        </Text>
+
+        <Text className="mt-2">
+          <TextLink href="https://cal.com/marshal-kalynchuk">Let&apos;s chat &rarr;</TextLink>
         </Text>
       </motion.div>
 
@@ -43,7 +47,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div {...animationProps}>
-        <Text className="text-pretty">Outside of work, you&apos;ll find me running, lifting, snowboarding, or lost in a book.</Text>
+        <Text className="text-pretty">Outside of work, you&apos;ll find me running, gymming, snowboarding, water skiing, or lost in a book.</Text>
       </motion.div>
 
       <motion.div {...animationProps} className="flex justify-center">

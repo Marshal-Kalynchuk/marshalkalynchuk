@@ -6,14 +6,25 @@ interface TextProps extends React.ComponentPropsWithoutRef<'p'> {
    * Visual emphasis of the text. "secondary" keeps the existing subdued styling.
    * "primary" makes the text higher-contrast for content that should stand out (e.g. chat messages).
    */
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'tertiary'
 }
 
 export function Text({ className, variant = 'primary', ...props }: TextProps) {
-  const variantClasses =
-    variant === 'primary'
-      ? 'text-lg/7 text-stone-950 sm:text-lg/7 dark:text-stone-50'
-      : 'text-base/7 text-stone-600 sm:text-base/7 dark:text-stone-400'
+    let variantClasses = ''
+    switch (variant) {
+      case 'primary':
+        variantClasses = 'text-lg/7 text-stone-950 sm:text-lg/7 dark:text-stone-50'
+        break
+      case 'secondary':
+        variantClasses = 'text-base/7 text-stone-600 sm:text-base/7 dark:text-stone-400'
+        break
+      case 'tertiary':
+        variantClasses = 'text-sm/7 text-stone-600 sm:text-sm/7 dark:text-stone-400'
+        break
+      default:
+        variantClasses = 'text-base/7 text-stone-600 sm:text-base/7 dark:text-stone-400'
+    }
+
 
   return (
     <p
