@@ -66,7 +66,8 @@ export default function ProjectsPage() {
       iconForeground: "text-yellow-700 dark:text-yellow-400",
       title: "Readbee",
       role: "Founder & Full-Stack Developer",
-      description: "A full-stack e-book platform hosting 90,000 books and interactive character chat.",
+      websiteLink: "https://archive.readbee.ca",
+      description: "A full-stack e-book platform hosting 90,000 books and customizable reading experience.",
       tech: [
         { name: "Tailwind CSS" },
         { name: "React" },
